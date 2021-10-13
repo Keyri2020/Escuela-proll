@@ -22,17 +22,26 @@ namespace ESCUELA.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(CourseViewModel viewModel)
         {
-            Course course = new Course();
+            if (!ModelState.IsValid)
+            {
+                return View("Index", viewModel);
+            }
+            else
+            {
+                Course course = new Course();
+                
+                course.Title = viewModel.Title;
+                course.Credits = viewModel.Credits;
+                icourses.Insertar(course);
 
-            course.CouserId = 1;
-            course.Title = "Update";
-            course.Credits = 100;
-            icourses.Insertar(course);
 
-            return View();
+                return View("Index");
+            }
         }
+
+        //public IActionResult Insert
 
         public IActionResult GetAll()
         {
