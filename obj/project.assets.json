@@ -5804,11 +5804,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\keyri\\OneDrive\\Escritorio\\Progra ESCUELA\\ESCUELA\\ESCUELA.csproj",
+      "projectUniqueName": "C:\\Users\\keyri\\OneDrive\\Documentos\\GitHub\\Escuela-proll\\ESCUELA.csproj",
       "projectName": "ESCUELA",
-      "projectPath": "C:\\Users\\keyri\\OneDrive\\Escritorio\\Progra ESCUELA\\ESCUELA\\ESCUELA.csproj",
+      "projectPath": "C:\\Users\\keyri\\OneDrive\\Documentos\\GitHub\\Escuela-proll\\ESCUELA.csproj",
       "packagesPath": "C:\\Users\\keyri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\keyri\\OneDrive\\Escritorio\\Progra ESCUELA\\ESCUELA\\obj\\",
+      "outputPath": "C:\\Users\\keyri\\OneDrive\\Documentos\\GitHub\\Escuela-proll\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
