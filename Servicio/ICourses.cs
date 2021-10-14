@@ -17,7 +17,7 @@ namespace ESCUELA.Servicio
 
         void Buscar(Course c);
 
-        public List<Course> ListarCursos();
+        ICollection<Course> ListarCursos();
 
         void CourseRepositorio(ApplicationDbContext app);
     }

@@ -41,7 +41,7 @@ namespace ESCUELA.Controllers
             }
         }
 
-        //public IActionResult Insert
+        
 
         public IActionResult GetAll()
         {

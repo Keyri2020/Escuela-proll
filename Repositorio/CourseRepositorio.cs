@@ -33,11 +33,11 @@ namespace ESCUELA.Repositorio
 
         public void Insertar(Course c)
         {
-            app.Update(c);
+            app.Add(c);
             app.SaveChanges();
         }
 
-        public List<Course> ListarCursos()
+        public ICollection<Course> ListarCursos()
         {
             return app.Courses.ToList();
         }
