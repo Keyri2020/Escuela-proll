@@ -1,0 +1,23 @@
+﻿@model ESCUELA.Dominio.Enrrollment
+@{
+    ViewData["Title"] = "ComboBox";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+
+<h1>ComboBox</h1>
+
+<body>
+    @using (Html.BeginForm("","",FormMethod.Post))
+     {
+
+
+        @Html.DropDownListFor(a => a.CourseId, new SelectList(ViewBag.estadoListCourse, "Value", "Text"), "Seleciona un curso", new { @clas = "form-control" })
+        <br />
+        @Html.DropDownListFor(a => a.StudentId, new SelectList(ViewBag.estadoListStudent, "Value", "Text"), "Seleciona un Student", new { @clas = "form-control" })
+        <br />
+        <input type="submit" />
+     }
+</body>
+</html>

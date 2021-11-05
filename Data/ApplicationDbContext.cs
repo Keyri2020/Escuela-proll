@@ -21,7 +21,7 @@ namespace ESCUELA.Data
         public DbSet<Enrrollment> Enrrollments { get; set; }
 
         public DbSet<Course> Courses { get; set; }
-
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

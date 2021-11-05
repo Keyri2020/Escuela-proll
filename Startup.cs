@@ -33,6 +33,8 @@ namespace ESCUELA
                 ("DefaultConnection")));
 
             services.AddTransient<ICourses, CourseRepositorio>(); //Inyección de dependencias
+            services.AddTransient<IRollments, EnrrollmentRepository>(); //EnrrollmentRepository la calse donde se implementa la interfaz
+            services.AddTransient<IStudent, StudentRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

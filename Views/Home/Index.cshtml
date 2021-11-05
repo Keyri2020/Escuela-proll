@@ -7,40 +7,35 @@
 <h1> <b>School</b> </h1>
 
 <h4></h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Index">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Credits" class="control-label"></label>
-                <input asp-for="Credits" class="form-control" />
-                <span asp-validation-for="Credits" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Index">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Title" class="control-label"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Credits" class="control-label"></label>
+                    <input asp-for="Credits" class="form-control" />
+                    <span asp-validation-for="Credits" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>    
+            </form>
+        </div>
     </div>
-</div>
 
-@*<div>
-        <a asp-action="GetAll">Back to list</a>
-    </div>*@
-<div>
-    <a asp-action="Index">Clean up</a>
-</div>
+    <div>
+        <a asp-action="Index"> Back to List </a>
+    </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    <h4></h4>
 
-<table id="mitabla" class="table table-striped table-hover">
+<table id="mitabla" class="table table-success table-striped">
 
     <thead>
         <tr>
@@ -61,11 +56,21 @@
 
 @section scripts{
 
-    <script src="https://cdn.datatables.net/1.11.3/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script>
-        $(document).ready(Function()){
-            var tabla = $('mitabla').DataTable
-        }
+        $(document).ready(function () {
+            var tabla = $('#mitabla').DataTable({
+                "ajax": {
+                    "url": '/Home/GetAll',
+                    "type": "get",
+                    "datatype": "json"
+                },
+                "columns": [
+                    { "data": "couserId", "name": "couserId", "autoWidth": true },
+                    { "data": "title", "name": "title", "autoWidth": true },
+                    { "data": "credits", "name": "credits", "autoWidth": true }
+                ]
+            });
+        });
     </script>
-
 }

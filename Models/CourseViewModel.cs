@@ -8,6 +8,7 @@ namespace ESCUELA.Models
 {
     public class CourseViewModel
     {
+
         [Display(Name = "Courses")]
         [Required(ErrorMessage = "Este campo es obligatorio.")]
 

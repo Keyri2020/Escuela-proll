@@ -1,0 +1,44 @@
+﻿@model List<ESCUELA.Dominio.Enrrollment>
+
+@{
+    ViewData["Title"] = "MostrarDatos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>MostrarDatos</h1>
+
+<table id="mitabla" class="table table-success table-striped">
+
+    <thead>
+        <tr>
+            @*try es para agregar una linea*@
+            <th>
+                Id Enrrollment
+            </th>
+            <th>
+                Student Id
+            </th>
+            <th>
+                LastName
+            </th>
+            <th>
+                FirstName
+            </th>
+        </tr>
+    </thead>
+
+</table>
+
+
+<body>
+    @foreach (var iteracion in Model)
+     {
+        <tr>
+            <td>@iteracion.EnrrollmentId</td>
+            <td>@iteracion.StudentId</td>
+            <td>@iteracion.Student.LastName</td>
+            <td>@iteracion.Student.FirstMidName</td>
+        </tr>
+
+     }
+</body>

@@ -1,0 +1,55 @@
+﻿@*@model ESCUELA.Models.EnrrollmentViewModel;*@
+
+@model List<ESCUELA.Dominio.Enrrollment>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table id="mitabla" class="table table-success table-striped">
+
+    <thead>
+        <tr>
+            <th>
+                Id Enrrollment
+            </th>
+            <th>
+                Student ID
+            </th>
+            <th>
+                LastName
+            </th>
+            <th>
+                FirstMidName
+            </th>
+            <th>
+                Curso al que pertenecen los estudiantes
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var iteracion in Model)
+         {
+            <tr>
+                <td>@iteracion.EnrrollmentId</td>
+                <td>@iteracion.StudentId</td>
+                <td>@iteracion.CourseId</td>
+                <td>@iteracion.Student.LastName</td>
+                <td>@iteracion.Student.FirstMidName</td>
+                <td>@iteracion.Course.Title</td>
+            </tr>
+         }
+
+    </tbody>
+
+</table>
+
+@section Scripts{
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var table = $('#mitabla').DataTable();
+
+        });
+    </script>
+}
