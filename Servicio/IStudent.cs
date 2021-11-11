@@ -8,6 +8,9 @@ namespace ESCUELA.Servicio
 {
     public interface IStudent
     {
+        void Insert(Students students);
+
+        void Update(Students students);
         List<Students> ListOfStudent();
     }
 }

@@ -94,33 +94,6 @@ namespace ESCUELA.Controllers
             return View("ComboBox");
         }
 
-        public IActionResult Index(CourseViewModel viewModel)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View("Index", viewModel);
-            }
-            else
-            {
-                for (int i = 0; i <= 100; i++)
-                {
-                    Course course = new Course();
-
-                    course.Title = viewModel.Title;
-                    course.Credits = viewModel.Credits;
-                    icourses.Insertar(course);
-
-                }
-                return View("Index");
-            }
-        }
-
-        public IActionResult GetAll()
-        {
-            var DandoFormatoJson = icourses.ListarCursos();
-            return Json(new { data = DandoFormatoJson });
-        }
-
         public IActionResult Privacy()
         {
             return View();

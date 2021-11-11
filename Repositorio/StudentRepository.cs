@@ -16,9 +16,21 @@ namespace ESCUELA.Repositorio
             this.app = app;
         }
 
+        public void Insert(Students students)
+        {
+            app.Add(students);
+            app.SaveChanges(); ;
+        }
+
         public List<Students> ListOfStudent()
         {
             return app.Students.ToList();
+        }
+
+        public void Update(Students students)
+        {
+            app.Update(students);
+            app.SaveChanges();
         }
     }
 }
