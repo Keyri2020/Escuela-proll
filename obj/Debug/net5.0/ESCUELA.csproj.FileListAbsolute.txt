@@ -233,3 +233,8 @@ C:\Users\keyri\OneDrive\Documentos\GitHub\Escuela-proll\bin\Debug\net5.0\runtime
 C:\Users\keyri\OneDrive\Documentos\GitHub\Escuela-proll\obj\Debug\net5.0\Razor\Views\Home\ComboBox.cshtml.g.cs
 C:\Users\keyri\OneDrive\Documentos\GitHub\Escuela-proll\obj\Debug\net5.0\Razor\Views\Home\MostrarDatos.cshtml.g.cs
 C:\Users\keyri\OneDrive\Documentos\GitHub\Escuela-proll\obj\Debug\net5.0\Razor\Views\Home\Index1.cshtml.g.cs
+C:\Users\keyri\OneDrive\Documentos\GitHub\Escuela-proll\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\keyri\OneDrive\Documentos\GitHub\Escuela-proll\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\keyri\OneDrive\Documentos\GitHub\Escuela-proll\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\keyri\OneDrive\Documentos\GitHub\Escuela-proll\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\keyri\OneDrive\Documentos\GitHub\Escuela-proll\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
